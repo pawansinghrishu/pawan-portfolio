@@ -20,7 +20,7 @@
     .badge{background:var(--accent);padding:6px 14px;border-radius:8px;font-size:13px;font-weight:700;color:#fff}
 
     .hero{display:flex;gap:40px;padding:60px;align-items:center}
-    .hero img{width:260px;height:260px;border-radius:16px;object-fit:cover;box-shadow:0 8px 25px rgba(30,144,255,0.18)}
+    .hero img{width:260px;height:260px;max-width:100%;max-height:100%;border-radius:16px;object-fit:cover;box-shadow:0 8px 25px rgba(30,144,255,0.18);}
     .hero h1{font-size:42px;margin:0}
     .hero h2{color:var(--accent);margin:6px 0 14px;font-size:22px}
     .btn{background:#007BFF;padding:12px 22px;border-radius:10px;color:white;font-weight:700;text-decoration:none;display:inline-block;margin-right:10px}
@@ -40,12 +40,46 @@
     footer{display:flex;justify-content:space-between;align-items:center;padding:18px 60px;background:rgba(255,255,255,0.03);backdrop-filter:blur(8px);border-top:1px solid rgba(255,255,255,0.04);color:var(--text-light)}
     .light-mode footer{background:rgba(220,233,255,0.6);color:var(--text-dark);border-color:rgba(0,0,0,0.08)}
 
-    @media(max-width:900px){.hero{flex-direction:column;align-items:flex-start}.nav{padding:14px}.section-title{margin-left:18px}.projects{padding:12px}}
+    /* animations & resets */
+    .fade-up{opacity:0;transform:translateY(16px);transition:opacity .45s ease,transform .45s ease}
+    .revealed{opacity:1;transform:translateY(0)}
+
+    /* responsive */
+    @media(max-width:768px){
+        .nav{flex-direction:column;gap:10px;padding:14px 20px;}
+        .nav-links{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;}
+        .hero{padding:20px !important;text-align:center;align-items:center;}
+        .hero img{width:180px;height:180px;margin-bottom:10px;}
+        .hero h1{font-size:32px;}
+        .hero h2{font-size:18px;}
+        .skills{padding:0 20px;}
+        .skill{width:100%;justify-content:center;}
+        .projects{padding:20px;grid-template-columns:1fr;}
+        footer{flex-direction:column;gap:10px;padding:20px;}
+    }
+    @media(max-width:480px){
+        .nav-left div{display:none;}
+        .nav-left img{width:46px;height:46px;}
+        .section-title{margin:20px;font-size:20px;}
+        .btn{padding:10px 16px;font-size:14px;}
+    }
+
+    /* smooth scroll & utilities */
+    html{scroll-behavior:smooth}
+    #floatBtn{position:fixed;bottom:22px;right:22px;background:#007BFF;color:white;padding:14px 16px;border-radius:50%;font-size:22px;font-weight:900;cursor:pointer;box-shadow:0 6px 20px rgba(0,0,0,0.3);z-index:999}
+    .hamburger{display:none;flex-direction:column;cursor:pointer;gap:5px}
+    .hamburger div{width:26px;height:3px;background:white;border-radius:3px}
+    .light-mode .hamburger div{background:#001833}
+    @media(max-width:768px){.nav-links{display:none;flex-direction:column;width:100%;text-align:center;padding-bottom:12px}.nav-links.mobile-open{display:flex}.hamburger{display:flex}}
 </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-abcdef" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body id="pageBody">
 
-<div class="nav">
+<div class="nav" style="backdrop-filter:blur(14px);background:rgba(9,28,50,0.55);border-bottom:1px solid rgba(255,255,255,0.12)">
+  <div class="hamburger" onclick="toggleMenu()">
+    <div></div><div></div><div></div>
+  </div>
   <div class="nav-left">
     <img id="profileImg" src="pawan.png" alt="Pawan Singh">
     <div>
@@ -64,6 +98,7 @@
 </div>
 
 <div class="hero">
+  <div id="lottieHero" style="width:260px;height:260px"></div>
   <img id="heroImg" src="pawan.png" alt="Pawan Singh">
   <div>
     <h1>Pawan Singh</h1>
@@ -77,8 +112,8 @@
   </div>
 </div>
 
-<div class="section-title" id="skills">Skills & Technologies</div>
-<div class="skills">
+<div class="section-title fade-up" id="skills">Skills & Technologies</div>
+<div class="skills fade-up" aria-hidden="false">
   <div class="skill">☁️ AWS (EC2, S3, RDS, Lambda, IAM, VPC)</div>
   <div class="skill">⚙️ CI/CD (Jenkins, GitHub Actions)</div>
   <div class="skill">🐳 Docker · ☸️ Kubernetes (EKS)</div>
@@ -89,12 +124,12 @@
   <div class="skill">💻 Bash · Python</div>
 </div>
 
-<div class="section-title" id="projects">Featured Projects</div>
-<div class="projects">
+<div class="section-title fade-up" id="projects">Featured Projects</div>
+<div class="projects fade-up">
   <div class="project">
     <h3 onclick="toggleDetails('p1')">Scouting Myntra App — DevSecOps CI/CD</h3>
-    <p>GitHub Actions · Docker · Trivy · Docker Scout · SonarQube · EKS</p>
-    <div id="p1" style="display:none;margin-top:8px">
+    <p class="muted">GitHub Actions · Docker · Trivy · Docker Scout · SonarQube · EKS</p>
+    <div id="p1" class="details" style="display:none;margin-top:8px">
       <p>• Automated CI/CD pipeline with GitHub Actions<br>• Integrated image scanning using Trivy & Docker Scout<br>• SonarQube quality gates and PR checks<br>• Deployed to AWS EKS using Helm charts</p>
       <p><a class="btn" href="https://github.com/pawansinghrishu" target="_blank">Open GitHub Repo</a></p>
     </div>
@@ -102,8 +137,8 @@
 
   <div class="project">
     <h3 onclick="toggleDetails('p2')">Secure Hotstar Clone — DevSecOps Pipeline</h3>
-    <p>Jenkins · Docker · Trivy · SonarQube · Kubernetes</p>
-    <div id="p2" style="display:none;margin-top:8px">
+    <p class="muted">Jenkins · Docker · Trivy · SonarQube · Kubernetes</p>
+    <div id="p2" class="details" style="display:none;margin-top:8px">
       <p>• Jenkins pipelines automating build/test/deploy<br>• Container security scanning with Trivy<br>• SonarQube for code quality<br>• Deployed on Kubernetes/EKS</p>
       <p><a class="btn" href="https://github.com/pawansinghrishu" target="_blank">Open GitHub Repo</a></p>
     </div>
@@ -111,51 +146,117 @@
 
   <div class="project">
     <h3 onclick="toggleDetails('p3')">Netflix Clone — Cloud Monitoring & Observability</h3>
-    <p>Prometheus · Grafana · Docker · Kubernetes</p>
-    <div id="p3" style="display:none;margin-top:8px">
+    <p class="muted">Prometheus · Grafana · Docker · Kubernetes</p>
+    <div id="p3" class="details" style="display:none;margin-top:8px">
       <p>• Implemented monitoring with Prometheus & Grafana<br>• Dashboards for latency, CPU, memory and requests<br>• Alerting rules and notifications<br>• Automated deployments using Jenkins</p>
       <p><a class="btn" href="https://github.com/pawansinghrishu" target="_blank">Open GitHub Repo</a></p>
     </div>
   </div>
 </div>
 
-<div class="section-title" id="help">Help Desk</div>
-<div style="padding:0 60px 60px;color:rgba(255,255,255,0.8)">
-  <p>For portfolio changes, resume updates, or DevOps help — click below:</p>
-  <p><a class="btn" href="mailto:pawansinghrishu@gmail.com?subject=Support Request&body=Hello Pawan,%0D%0A%0D%0AI need help with:">📨 Email Help Desk</a></p>
+<div class="section-title fade-up" id="experience">Experience Timeline</div>
+<div class="timeline fade-up" style="border-left:3px solid var(--accent);margin:20px 60px;padding-left:20px">
+  <div class="timeline-item"><h4>2025 – Present</h4><p>DevOps Engineer (Projects) — Working on CI/CD, AWS, Kubernetes & automation.</p></div>
+  <div class="timeline-item"><h4>2023 – 2025</h4><p>MCA — Galgotias University • Cloud & DevOps specialization.</p></div>
+</div>
+
+<div class="section-title fade-up" id="certifications">Certifications</div>
+<div class="cert-grid fade-up" style="display:flex;gap:16px;padding:0 60px;flex-wrap:wrap">
+  <div class="cert">🏅 AWS Solutions Architect — Associate</div>
+  
+</div>
+
+<div class="section-title fade-up" id="help">Help Desk</div>
+<div style="padding:0 60px 60px;color:rgba(255,255,255,0.8)" id="helpBox">
+  <p>For any support, portfolio changes, resume updates, project guidance, or DevOps help — click below to send a support email. The mail opens in your default email client with a template message.</p>
+  <p><a class="btn" href="mailto:pawansinghrishu@gmail.com?subject=Support Request&body=Hello%20Pawan%2C%0A%0AI%20need%20help%20with%3A%20">📨 Email Help Desk</a></p>
 </div>
 
 <footer>
   <div>© Pawan Singh — AWS DevOps Engineer</div>
-  <div style="display:flex;gap:12px;align-items:center">
-    <a href="https://github.com/pawansinghrishu" target="_blank" style="color:inherit;text-decoration:none">GitHub</a>
-    <a href="https://www.linkedin.com/in/pawan009" target="_blank" style="color:inherit;text-decoration:none">LinkedIn</a>
-    <a href="mailto:pawansinghrishu@gmail.com" style="color:inherit;text-decoration:none">Email</a>
+  <div style="display:flex;gap:18px;align-items:center;font-size:22px">
+    <a href="https://github.com/pawansinghrishu" target="_blank" style="color:inherit;text-decoration:none"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" style="width:24px;filter:invert(1);"></a>
+    <a href="https://www.linkedin.com/in/pawan009" target="_blank" style="color:inherit;text-decoration:none"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" style="width:24px;filter:invert(1);"></a>
+    <a href="https://wa.me/919709082083" target="_blank" style="color:#25D366;text-decoration:none"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg" style="width:24px;filter:invert(1);"></a>
+    <a href="https://facebook.com/yourprofile" target="_blank" style="color:#3b5998;text-decoration:none"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" style="width:24px;filter:invert(1);"></a>
+    <a href="https://www.instagram.com/rishu_thakur0009" target="_blank" style="color:#d62976;text-decoration:none"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" style="width:24px;filter:invert(1);"></a>
+    <a href="mailto:pawansinghrishu@gmail.com" style="color:inherit;text-decoration:none"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/gmail.svg" style="width:24px;filter:invert(1);"></a>
   </div>
 </footer>
 
+<div id="floatBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</div>
+<div id="contactFloat" onclick="openContact()" style="position:fixed;bottom:90px;right:22px;background:#25D366;color:white;padding:18px;border-radius:50%;font-size:26px;cursor:pointer;box-shadow:0 6px 20px rgba(0,0,0,.3);z-index:999">
+  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg" style="width:28px;filter:invert(1);">
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
 <script>
+// safe Lottie load (try/catch in case CDN blocked)
+try{
+  if(window.lottie){
+    lottie.loadAnimation({container:document.getElementById('lottieHero'),renderer:'svg',loop:true,autoplay:true,path:'https://assets2.lottiefiles.com/private_files/lf30_fjjsbwar.json'});
+  }
+}catch(e){console.warn('Lottie failed to load',e)}
+
+// Contact Popup
+function openContact(){window.location.href='https://wa.me/919709082083?text=Hello%20Pawan%20I%20need%20help'}
+
+// Mobile Menu Toggle
+function toggleMenu(){document.querySelector('.nav-links').classList.toggle('mobile-open')}
+
+// Combined script: theme toggle + project toggles + initial state
 (function(){
   const body = document.getElementById('pageBody');
   const themeToggle = document.getElementById('themeToggle');
+  // load saved preference
   let isLight = false;
   try{
     const saved = localStorage.getItem('prefersLight');
-    if(saved === '1') { isLight = true; body.classList.add('light-mode'); }
-  }catch(e){}
+    if(saved === '1') { isLight = true; body.classList.add('light-mode'); themeToggle.textContent = 'Light Mode'; }
+    else { isLight = false; body.classList.remove('light-mode'); themeToggle.textContent = 'Dark Mode'; }
+  }catch(e){ /* ignore */ }
 
   themeToggle.addEventListener('click', function(){
     isLight = !isLight;
-    if(isLight){ body.classList.add('light-mode'); localStorage.setItem('prefersLight','1'); }
-    else{ body.classList.remove('light-mode'); localStorage.setItem('prefersLight','0'); }
+    if(isLight){ body.classList.add('light-mode'); themeToggle.textContent = 'Light Mode'; localStorage.setItem('prefersLight','1'); }
+    else{ body.classList.remove('light-mode'); themeToggle.textContent = 'Dark Mode'; localStorage.setItem('prefersLight','0'); }
   });
 
+  // project details toggle function (exposed globally so onclick attributes work)
   window.toggleDetails = function(id){
     const el = document.getElementById(id);
+    if(!el) return;
     el.style.display = (el.style.display === 'none' || el.style.display === '') ? 'block' : 'none';
   };
-})();
-</script>
 
+  // reveal animations on load
+  const revealTargets = document.querySelectorAll('.fade-up, .fade-up *');
+  function runReveal(){revealTargets.forEach(el=>{const rect = el.getBoundingClientRect();if(rect.top < window.innerHeight-80){el.classList.add('revealed')}})}
+  runReveal();window.addEventListener('scroll',runReveal);
+})();
+
+// GitHub Activity Graph: try fetch, fallback to local placeholder if blocked
+async function loadGitHubContrib(){
+  const targetParent = document.getElementById('projects');
+  try{
+    const res = await fetch('https://ghchart.rshah.org/pawansinghrishu');
+    if(!res.ok) throw new Error('Network response not ok');
+    const svg = await res.text();
+    const wrapper = document.createElement('div');
+    wrapper.style.padding = '40px 60px';
+    wrapper.innerHTML = '<h2>GitHub Contributions</h2>' + svg;
+    targetParent.insertAdjacentElement('afterend', wrapper);
+  }catch(err){
+    console.warn('GitHub chart fetch failed, inserting fallback', err);
+    const placeholder = document.createElement('div');
+    placeholder.style.padding='40px 60px';
+    placeholder.innerHTML = '<h2>GitHub Contributions</h2><div style="background:rgba(255,255,255,0.03);padding:20px;border-radius:10px;color:rgba(255,255,255,0.8)">Contributions chart unavailable in this environment. Visit <a href="https://github.com/pawansinghrishu" target="_blank">GitHub profile</a> to view contributions.</div>';
+    targetParent.insertAdjacentElement('afterend', placeholder);
+  }
+}
+// call loader
+loadGitHubContrib();
+</script>
 </body>
 </html>
+
