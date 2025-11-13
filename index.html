@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pawan Singh — AWS DevOps Engineer</title>
+<style>
+    :root{--bg-dark:#07182E;--nav-dark:#091C32;--card-dark:#0D2647;--accent:#4DA3FF;--text-light:#C5DBFF}
+    :root{--bg-light:#f5f9ff;--nav-light:#eaf2ff;--card-light:#dce9ff;--text-dark:#001833}
+    body{
+        margin:0;font-family:Inter, Arial;background:var(--bg-dark);color:var(--text-light);transition:background 0.3s,color 0.3s;
+    }
+    .light-mode{background:var(--bg-light);color:var(--text-dark)}
+    .nav{display:flex;justify-content:space-between;padding:20px 60px;background:var(--nav-dark);align-items:center;box-shadow:0 4px 20px rgba(0,0,0,0.18);position:sticky;top:0;z-index:10}
+    .light-mode .nav{background:var(--nav-light);box-shadow:0 4px 14px rgba(0,0,0,0.06)}
+    .nav-left{display:flex;align-items:center;gap:12px;font-size:20px;font-weight:700}
+    .nav-left img{width:56px;height:56px;border-radius:12px;object-fit:cover;border:2px solid rgba(255,255,255,0.04)}
+    .nav-links a{margin:0 12px;text-decoration:none;color:var(--text-light);font-weight:600}
+    .light-mode .nav-links a{color:var(--text-dark)}
+    .badge{background:var(--accent);padding:6px 14px;border-radius:8px;font-size:13px;font-weight:700;color:#fff}
+
+    .hero{display:flex;gap:40px;padding:60px;align-items:center}
+    .hero img{width:260px;height:260px;border-radius:16px;object-fit:cover;box-shadow:0 8px 25px rgba(30,144,255,0.18)}
+    .hero h1{font-size:42px;margin:0}
+    .hero h2{color:var(--accent);margin:6px 0 14px;font-size:22px}
+    .btn{background:#007BFF;padding:12px 22px;border-radius:10px;color:white;font-weight:700;text-decoration:none;display:inline-block;margin-right:10px}
+
+    .section-title{margin:40px 60px 10px;font-size:22px;font-weight:700}
+    .skills{display:flex;flex-wrap:wrap;gap:14px;padding:0 60px}
+    .skill{background:var(--card-dark);padding:12px 16px;border-radius:12px;font-weight:700;color:var(--text-light);display:flex;align-items:center;gap:8px}
+    .light-mode .skill{background:var(--card-light);color:var(--text-dark)}
+
+    .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;padding:20px 60px 60px}
+    .project{background:var(--card-dark);padding:18px;border-radius:14px;transition:transform 0.25s ease,box-shadow 0.25s ease}
+    .project:hover{transform:translateY(-6px);box-shadow:0 10px 30px rgba(0,0,0,0.35)}
+    .light-mode .project{background:var(--card-light)}
+    .project h3{margin:0 0 6px 0;cursor:pointer}
+    .project p{margin:6px 0}
+
+    footer{display:flex;justify-content:space-between;align-items:center;padding:18px 60px;background:rgba(255,255,255,0.03);backdrop-filter:blur(8px);border-top:1px solid rgba(255,255,255,0.04);color:var(--text-light)}
+    .light-mode footer{background:rgba(220,233,255,0.6);color:var(--text-dark);border-color:rgba(0,0,0,0.08)}
+
+    @media(max-width:900px){.hero{flex-direction:column;align-items:flex-start}.nav{padding:14px}.section-title{margin-left:18px}.projects{padding:12px}}
+</style>
+</head>
+<body id="pageBody">
+
+<div class="nav">
+  <div class="nav-left">
+    <img id="profileImg" src="pawan.png" alt="Pawan Singh">
+    <div>
+      <div style="font-size:18px">Pawan Singh</div>
+      <div style="font-size:13px;color:rgba(255,255,255,0.7)">AWS DevOps Engineer</div>
+    </div>
+  </div>
+  <div class="nav-links">
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="https://www.linkedin.com/in/pawan009" target="_blank">LinkedIn</a>
+    <a href="https://github.com/pawansinghrishu" target="_blank">GitHub</a>
+    <button id="themeToggle" style="margin-left:12px;padding:8px 12px;border-radius:8px;border:none;background:#12365a;color:white;font-weight:600;cursor:pointer">Toggle Mode</button>
+    <span class="badge">AWS SAA</span>
+  </div>
+</div>
+
+<div class="hero">
+  <img id="heroImg" src="pawan.png" alt="Pawan Singh">
+  <div>
+    <h1>Pawan Singh</h1>
+    <h2>AWS DevOps Engineer — Solutions Architect (Associate)</h2>
+    <p>Cloud & DevOps engineer — AWS, CI/CD, Terraform, Docker, Kubernetes, automation and cloud infrastructure design.</p>
+    <p style="margin-top:12px">
+      <a class="btn" href="resume.pdf" download>⬇ Download Resume</a>
+      <a class="btn" href="https://github.com/pawansinghrishu" target="_blank">View GitHub</a>
+      <a class="btn" href="mailto:pawansinghrishu@gmail.com">Email</a>
+    </p>
+  </div>
+</div>
+
+<div class="section-title" id="skills">Skills & Technologies</div>
+<div class="skills">
+  <div class="skill">☁️ AWS (EC2, S3, RDS, Lambda, IAM, VPC)</div>
+  <div class="skill">⚙️ CI/CD (Jenkins, GitHub Actions)</div>
+  <div class="skill">🐳 Docker · ☸️ Kubernetes (EKS)</div>
+  <div class="skill">📦 Terraform · CloudFormation</div>
+  <div class="skill">🤖 Ansible</div>
+  <div class="skill">📊 Prometheus · Grafana · CloudWatch</div>
+  <div class="skill">🔐 DevSecOps (Trivy · Docker Scout · SonarQube)</div>
+  <div class="skill">💻 Bash · Python</div>
+</div>
+
+<div class="section-title" id="projects">Featured Projects</div>
+<div class="projects">
+  <div class="project">
+    <h3 onclick="toggleDetails('p1')">Scouting Myntra App — DevSecOps CI/CD</h3>
+    <p>GitHub Actions · Docker · Trivy · Docker Scout · SonarQube · EKS</p>
+    <div id="p1" style="display:none;margin-top:8px">
+      <p>• Automated CI/CD pipeline with GitHub Actions<br>• Integrated image scanning using Trivy & Docker Scout<br>• SonarQube quality gates and PR checks<br>• Deployed to AWS EKS using Helm charts</p>
+      <p><a class="btn" href="https://github.com/pawansinghrishu" target="_blank">Open GitHub Repo</a></p>
+    </div>
+  </div>
+
+  <div class="project">
+    <h3 onclick="toggleDetails('p2')">Secure Hotstar Clone — DevSecOps Pipeline</h3>
+    <p>Jenkins · Docker · Trivy · SonarQube · Kubernetes</p>
+    <div id="p2" style="display:none;margin-top:8px">
+      <p>• Jenkins pipelines automating build/test/deploy<br>• Container security scanning with Trivy<br>• SonarQube for code quality<br>• Deployed on Kubernetes/EKS</p>
+      <p><a class="btn" href="https://github.com/pawansinghrishu" target="_blank">Open GitHub Repo</a></p>
+    </div>
+  </div>
+
+  <div class="project">
+    <h3 onclick="toggleDetails('p3')">Netflix Clone — Cloud Monitoring & Observability</h3>
+    <p>Prometheus · Grafana · Docker · Kubernetes</p>
+    <div id="p3" style="display:none;margin-top:8px">
+      <p>• Implemented monitoring with Prometheus & Grafana<br>• Dashboards for latency, CPU, memory and requests<br>• Alerting rules and notifications<br>• Automated deployments using Jenkins</p>
+      <p><a class="btn" href="https://github.com/pawansinghrishu" target="_blank">Open GitHub Repo</a></p>
+    </div>
+  </div>
+</div>
+
+<div class="section-title" id="help">Help Desk</div>
+<div style="padding:0 60px 60px;color:rgba(255,255,255,0.8)">
+  <p>For portfolio changes, resume updates, or DevOps help — click below:</p>
+  <p><a class="btn" href="mailto:pawansinghrishu@gmail.com?subject=Support Request&body=Hello Pawan,%0D%0A%0D%0AI need help with:">📨 Email Help Desk</a></p>
+</div>
+
+<footer>
+  <div>© Pawan Singh — AWS DevOps Engineer</div>
+  <div style="display:flex;gap:12px;align-items:center">
+    <a href="https://github.com/pawansinghrishu" target="_blank" style="color:inherit;text-decoration:none">GitHub</a>
+    <a href="https://www.linkedin.com/in/pawan009" target="_blank" style="color:inherit;text-decoration:none">LinkedIn</a>
+    <a href="mailto:pawansinghrishu@gmail.com" style="color:inherit;text-decoration:none">Email</a>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const body = document.getElementById('pageBody');
+  const themeToggle = document.getElementById('themeToggle');
+  let isLight = false;
+  try{
+    const saved = localStorage.getItem('prefersLight');
+    if(saved === '1') { isLight = true; body.classList.add('light-mode'); }
+  }catch(e){}
+
+  themeToggle.addEventListener('click', function(){
+    isLight = !isLight;
+    if(isLight){ body.classList.add('light-mode'); localStorage.setItem('prefersLight','1'); }
+    else{ body.classList.remove('light-mode'); localStorage.setItem('prefersLight','0'); }
+  });
+
+  window.toggleDetails = function(id){
+    const el = document.getElementById(id);
+    el.style.display = (el.style.display === 'none' || el.style.display === '') ? 'block' : 'none';
+  };
+})();
+</script>
+
+</body>
+</html>
