@@ -1,32 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Pawan Singh — AWS DevOps Engineer</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Pawan Singh — AWS DevOps Engineer | Portfolio</title>
 
-<!-- ====== SEO META ====== -->
-<meta name="description" content="Pawan Singh — AWS DevOps & Cloud Engineer from India. Portfolio showcasing AWS, CI/CD, Docker, Kubernetes, Terraform, Jenkins, and cloud automation projects.">
-<meta name="keywords" content="Pawan Singh, Cloud Engineer India, DevOps Engineer, AWS Engineer, DevOps Portfolio, AWS DevOps Resume, Kubernetes, Terraform, Jenkins, CI/CD">
-<meta name="author" content="Pawan Singh">
-<meta name="robots" content="index, follow">
+<!-- Basic SEO -->
+<meta name="description" content="Pawan Singh — AWS DevOps & Cloud Engineer. Portfolio showcasing CI/CD, Docker, Kubernetes (EKS), Terraform, GitHub Actions and DevSecOps projects." />
+<meta name="keywords" content="Pawan Singh, DevOps Engineer, Cloud Engineer India, AWS, Kubernetes, Terraform, CI/CD" />
 <link rel="canonical" href="https://pawancloud.in/">
 
 <!-- Open Graph -->
-<meta property="og:title" content="Pawan Singh | AWS DevOps Engineer & Cloud Architect">
-<meta property="og:description" content="Portfolio of Pawan Singh — AWS, Docker, Kubernetes, Terraform, CI/CD & Cloud Engineering Projects">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://pawancloud.in/">
-<meta property="og:image" content="https://pawancloud.in/pawan.png">
-<meta property="og:image:alt" content="Pawan Singh — AWS DevOps Engineer">
+<meta property="og:title" content="Pawan Singh — AWS DevOps Engineer" />
+<meta property="og:description" content="Portfolio of Pawan Singh — DevOps & Cloud Engineer (CI/CD, Docker, Kubernetes, Terraform, DevSecOps)" />
+<meta property="og:image" content="https://pawancloud.in/pawan.png" />
+<meta property="og:url" content="https://pawancloud.in/" />
+<meta property="og:type" content="website" />
 
 <!-- Twitter -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Pawan Singh | AWS DevOps Engineer">
-<meta name="twitter:description" content="Portfolio of Pawan Singh — DevOps & Cloud Engineer in India">
-<meta name="twitter:image" content="https://pawancloud.in/pawan.png">
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Pawan Singh — AWS DevOps Engineer" />
+<meta name="twitter:description" content="Portfolio of Pawan Singh — DevOps & Cloud Engineer" />
+<meta name="twitter:image" content="https://pawancloud.in/pawan.png" />
 
-<!-- JSON-LD Schema -->
+<!-- JSON-LD -->
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -35,305 +32,309 @@
   "url":"https://pawancloud.in/",
   "image":"https://pawancloud.in/pawan.png",
   "jobTitle":"AWS DevOps Engineer",
-  "description":"AWS DevOps Engineer & Cloud Architect specializing in AWS, CI/CD, Terraform, Docker, Kubernetes, automation, and cloud architecture.",
-  "sameAs":[
-    "https://github.com/pawansinghrishu",
-    "https://www.linkedin.com/in/pawan009"
-  ],
-  "knowsAbout":["AWS Cloud","DevOps","Docker","Kubernetes","Terraform","Linux","CI/CD Pipelines","Cloud Architecture"]
+  "description":"Enthusiastic and detail-oriented DevOps & Cloud Engineer (Fresher) with hands-on knowledge of CI/CD automation, Docker, Kubernetes (EKS), Terraform, GitHub Actions and DevSecOps tools.",
+  "sameAs":["https://github.com/pawansinghrishu","https://www.linkedin.com/in/pawan009"]
 }
 </script>
 
-<!-- Styles -->
+<!-- Styles (GoodSpace-like minimal + responsive) -->
 <style>
-  :root{--bg-dark:#07182E;--nav-dark:rgba(9,28,50,0.55);--card-dark:#0D2647;--accent:#4DA3FF;--text-light:#C5DBFF}
-  :root{--bg-light:#f5f9ff;--nav-light:#eaf2ff;--card-light:#dce9ff;--text-dark:#001833}
-  body{margin:0;font-family:Inter,Arial,Helvetica;background:var(--bg-dark);color:var(--text-light);transition:background .3s,color .3s;}
-  .light-mode{background:var(--bg-light);color:var(--text-dark)}
-  .glass{background: rgba(255,255,255,0.06);backdrop-filter: blur(12px);border:1px solid rgba(255,255,255,0.08);border-radius:12px}
-  header, .nav{box-shadow:0 4px 20px rgba(0,0,0,0.18)}
-  .nav{display:flex;justify-content:space-between;padding:18px 48px;background:var(--nav-dark);align-items:center;position:sticky;top:0;z-index:60}
-  .light-mode .nav{background:var(--nav-light);box-shadow:0 4px 14px rgba(0,0,0,0.06)}
-  .nav-left{display:flex;align-items:center;gap:12px;font-size:18px;font-weight:700}
-  .nav-left img{width:56px;height:56px;border-radius:12px;object-fit:cover;border:2px solid rgba(255,255,255,0.04)}
-  .nav-links a{margin:0 12px;text-decoration:none;color:var(--text-light);font-weight:600}
-  .light-mode .nav-links a{color:var(--text-dark)}
-  .badge{background:var(--accent);padding:6px 12px;border-radius:8px;font-size:13px;font-weight:700;color:#fff}
+  :root{
+    --bg:#faf9f7; --dot:#e8e0d9; --accent:#1a73e8; --text:#111;
+    --card:#ffffff; --muted:#6b6b6b; --pill-bg:rgba(255,255,255,0.12);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;color:var(--text);background:var(--bg);-webkit-font-smoothing:antialiased}
+  a{color:inherit}
 
-  .hero{display:flex;gap:30px;padding:56px;align-items:center;max-width:1100px;margin:0 auto}
-  .hero .hero-left{flex:0 0 280px}
-  .hero img{width:260px;height:260px;max-width:100%;border-radius:16px;object-fit:cover;box-shadow:0 10px 30px rgba(0,0,0,0.4)}
-  .hero h1{font-size:36px;margin:0}
-  .hero h2{color:var(--accent);margin:6px 0 10px;font-size:20px}
-  .btn{background:#007BFF;padding:10px 18px;border-radius:10px;color:white;font-weight:700;text-decoration:none;display:inline-block;margin-right:8px}
+  /* dotted background container */
+  .dots{
+    background-image: radial-gradient(var(--dot) 1px, transparent 1px);
+    background-size: 24px 24px;
+    padding:48px 20px 24px;
+  }
 
-  .section-title{margin:36px auto 10px;font-size:20px;font-weight:800;max-width:1100px;padding:0 20px}
-  .section{background:transparent;max-width:1100px;margin:0 auto 20px;padding:18px 20px;border-radius:12px}
-  .skills{display:flex;flex-wrap:wrap;gap:12px;padding:6px 0}
-  .skill{background:var(--card-dark);padding:10px 12px;border-radius:10px;font-weight:700;color:var(--text-light);display:inline-flex;align-items:center;gap:8px}
-  .light-mode .skill{background:var(--card-light);color:var(--text-dark)}
+  /* header / nav */
+  header.site-nav{display:flex;justify-content:space-between;align-items:center;padding:14px 28px;background:transparent;position:sticky;top:0;z-index:80}
+  .nav-left{display:flex;gap:12px;align-items:center}
+  .nav-left img{width:52px;height:52px;border-radius:10px;object-fit:cover;box-shadow:0 6px 20px rgba(0,0,0,0.06)}
+  .nav-links{display:flex;gap:18px;align-items:center;font-weight:600}
+  .nav-links a{padding:8px 12px;border-radius:10px;text-decoration:none;color:var(--text)}
+  .badge{background:var(--accent);color:#fff;padding:8px 12px;border-radius:12px;font-weight:700}
 
-  /* Skill graph */
-  .skill-graph{padding:0 20px 20px}
-  .graph-row{margin-bottom:12px;font-weight:700;display:flex;flex-direction:column}
-  .graph-row span{font-size:14px;margin-bottom:6px}
-  .bar{height:12px;background:linear-gradient(90deg,var(--accent),#1e90ff);border-radius:8px;box-shadow:0 6px 18px rgba(13,38,71,0.3)}
+  /* HERO */
+  .hero{max-width:1100px;margin:18px auto 26px;display:flex;flex-direction:column;align-items:center;gap:10px}
+  .hero .status{background:#e8f3ff;color:var(--accent);padding:6px 14px;border-radius:999px;font-weight:700;font-size:14px}
+  .hero h3{margin:6px 0 0;font-weight:600;color:#556;font-size:18px}
+  .hero h1{font-size:64px;line-height:1;margin:6px 0;font-weight:800;color:var(--text);letter-spacing:-1px}
+  .hero h2{font-size:20px;color:#4b6b8a;margin:8px 0 6px;font-weight:600}
+  .hero .loc{display:inline-flex;gap:8px;align-items:center;background:#ecfff0;color:#17692b;padding:6px 14px;border-radius:999px;font-weight:700}
+  .hero .updated{color:var(--muted);font-size:14px;margin-top:8px}
+  .hero .cta{display:inline-block;margin-top:18px;background:var(--accent);color:#fff;padding:12px 22px;border-radius:10px;text-decoration:none;font-weight:700}
 
-  /* Projects grid */
-  .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px;padding:12px 20px 30px}
-  .project{background:var(--card-dark);padding:16px;border-radius:12px;transition:transform .2s,box-shadow .2s}
-  .project:hover{transform:translateY(-6px);box-shadow:0 12px 30px rgba(0,0,0,0.5)}
-  .light-mode .project{background:var(--card-light);}
+  /* summary (quote) */
+  .summary-wrap{max-width:1100px;margin:40px auto 36px;padding:28px 22px;position:relative}
+  .quote-left{position:absolute;left:-28px;top:-10px;font-size:72px;color:var(--accent);opacity:0.12}
+  .quote-right{position:absolute;right:-28px;bottom:-10px;font-size:72px;color:var(--accent);opacity:0.12}
+  .summary{background:var(--card);padding:30px;border-radius:14px;box-shadow:0 10px 30px rgba(16,24,40,0.04);font-size:18px;line-height:1.75;color:#333}
 
-  /* Architecture */
-  .arch-section{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;padding:12px 20px 30px}
-  .arch-card{background:var(--card-dark);padding:12px;border-radius:12px;text-align:center}
-  .arch-card img{width:100%;height:150px;object-fit:cover;border-radius:8px;margin-top:10px}
+  /* skills card */
+  .skills-card{max-width:1100px;margin:36px auto;padding:36px;border-radius:12px;background:var(--accent);color:#fff}
+  .skills-card h2{margin:0 0 14px;font-size:26px}
+  .pills{display:flex;flex-wrap:wrap;gap:10px}
+  .pill{background:rgba(255,255,255,0.15);padding:8px 14px;border-radius:999px;font-weight:700;font-size:14px;color:#fff}
 
-  /* Blog */
-  .blog-section{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;padding:12px 20px 30px}
-  .blog-card{background:var(--card-dark);padding:16px;border-radius:12px}
-  .blog-card p{margin:8px 0 12px;color:rgba(255,255,255,0.8)}
+  /* projects grid */
+  .projects-wrap{max-width:1100px;margin:36px auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px;padding:0 10px}
+  .proj{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 8px 28px rgba(16,24,40,0.04)}
+  .proj h3{margin:0 0 6px;font-size:20px}
+  .proj .muted{color:var(--muted);font-size:14px;margin-bottom:8px}
+  .proj p{margin:0 0 8px;color:#333}
+  .proj .proj-btn{display:inline-block;background:var(--accent);color:#fff;padding:8px 12px;border-radius:8px;text-decoration:none;font-weight:700}
 
-  /* Contact form */
-  .contact-form{display:flex;flex-direction:column;gap:10px;padding:0 20px 30px}
-  .contact-form input,.contact-form textarea{padding:12px;border-radius:8px;border:none;background:rgba(255,255,255,0.03);color:var(--text-light)}
-  .light-mode .contact-form input,.light-mode .contact-form textarea{background:var(--card-light);color:var(--text-dark)}
-  .contact-form button{width:160px;padding:10px;border-radius:8px;border:none;background:#007BFF;color:white;font-weight:700;cursor:pointer}
+  /* experience / education */
+  .card{max-width:1100px;margin:28px auto;padding:18px;background:var(--card);border-radius:12px;box-shadow:0 8px 28px rgba(16,24,40,0.04)}
+  .job-title{font-size:20px;font-weight:800;margin:0}
+  .job-sub{color:var(--muted);font-weight:700;margin:6px 0 12px}
 
-  footer{max-width:1100px;margin:20px auto;padding:18px 20px;display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,0.02);border-radius:10px;color:var(--text-light)}
-  .light-mode footer{background:rgba(220,233,255,0.6);color:var(--text-dark)}
+  /* certifications */
+  .certs{max-width:1100px;margin:18px auto;padding:18px;display:flex;gap:12px;flex-wrap:wrap}
+  .cert{background:#fff;border:1px solid rgba(0,0,0,0.06);padding:8px 12px;border-radius:10px;font-weight:700}
 
-  /* small screens */
+  /* contact area */
+  .contact{max-width:1100px;margin:24px auto 80px;padding:18px;background:var(--card);border-radius:12px;display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+  .contact .contact-row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+  .contact a.contact-btn{background:#25D366;color:#fff;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:800}
+
+  /* bottom skills strip (black) */
+  .skills-strip{width:100%;background:#0b0b0b;color:#fff;padding:14px 0;margin-top:40px;display:flex;gap:24px;overflow:auto;white-space:nowrap;align-items:center}
+  .skills-strip .item{display:inline-block;padding:8px 18px;border-radius:999px;background:transparent;color:#fff;font-weight:700}
+
+  footer{max-width:1100px;margin:36px auto 60px;padding:22px;text-align:left;color:var(--muted)}
+
+  /* responsive */
   @media(max-width:900px){
-    .hero{flex-direction:column;padding:28px}
-    .hero img{width:180px;height:180px}
+    .hero h1{font-size:36px}
+    .summary{font-size:16px}
+    .skills-card{padding:22px}
   }
-  @media(max-width:480px){
-    .nav{padding:12px}
+  @media(max-width:520px){
     .nav-links{display:none}
+    .hero h1{font-size:28px}
+    .skills-strip{font-size:14px}
+    .projects-wrap{grid-template-columns:1fr}
   }
-
-  /* utilities */
-  .muted{color:rgba(255,255,255,0.7)}
-  .float-cta{position:fixed;right:20px;bottom:20px;background:#25D366;color:white;padding:12px;border-radius:50%;z-index:999;box-shadow:0 10px 30px rgba(0,0,0,0.4)}
 </style>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
 </head>
-<body id="pageBody">
+<body>
 
 <!-- NAV -->
-<div class="nav glass">
+<header class="site-nav">
   <div class="nav-left">
-    <img id="profileImg" src="pawan.png" alt="Pawan Singh">
+    <img src="pawan.png" alt="Pawan Singh" />
     <div>
-      <div style="font-size:16px">Pawan Singh</div>
-      <div style="font-size:12px;color:rgba(255,255,255,0.75)">AWS DevOps Engineer</div>
+      <div style="font-weight:800">Pawan Singh</div>
+      <div style="font-size:13px;color:var(--muted)">AWS DevOps Engineer</div>
     </div>
   </div>
 
-  <div class="nav-links">
-    <a href="#skills">Skills</a>
+  <nav class="nav-links" aria-label="Main navigation">
+    <a href="#intro">Intro</a>
     <a href="#projects">Projects</a>
-    <a href="#blog">Blog</a>
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
     <a href="#contact">Contact</a>
-    <a href="https://github.com/pawansinghrishu" target="_blank">GitHub</a>
-    <a href="https://www.linkedin.com/in/pawan009" target="_blank">LinkedIn</a>
     <span class="badge">AWS SAA</span>
-  </div>
-</div>
+  </nav>
+</header>
 
 <!-- HERO -->
-<section class="hero">
-  <div class="hero-left">
-    <img src="pawan.png" alt="Pawan Singh">
-  </div>
-  <div class="hero-right">
+<section class="dots">
+  <div class="hero" id="intro" role="banner">
+    <div class="status">🟢 Open to work</div>
+    <h3>Hello there, I'm</h3>
     <h1>Pawan Singh</h1>
-    <h2>AWS DevOps Engineer — Solutions Architect (Associate)</h2>
-    <p class="muted">Cloud & DevOps engineer — AWS, CI/CD, Terraform, Docker, Kubernetes, automation and cloud infrastructure design.</p>
-    <p style="margin-top:12px">
-      <a class="btn" id="resumeBtn" onclick="countDownload()" href="resume.pdf" download>⬇ Download Resume (<span id="dlCount">0</span>)</a>
-      <a class="btn" href="https://github.com/pawansinghrishu" target="_blank">View GitHub</a>
-      <a class="btn" href="mailto:pawansinghrishu@gmail.com">Email</a>
-    </p>
-  </div>
-</section>
-
-<!-- SKILLS -->
-<div class="section-title">Skills & Technologies</div>
-<section class="section glass" id="skills">
-  <div class="skills">
-    <div class="skill">☁️ AWS (EC2, S3, RDS, Lambda, IAM, VPC)</div>
-    <div class="skill">⚙️ CI/CD (Jenkins, GitHub Actions)</div>
-    <div class="skill">🐳 Docker · ☸️ Kubernetes (EKS)</div>
-    <div class="skill">📦 Terraform · CloudFormation</div>
-    <div class="skill">🤖 Ansible</div>
-    <div class="skill">📊 Prometheus · Grafana · CloudWatch</div>
-    <div class="skill">🔐 DevSecOps (Trivy · SonarQube)</div>
-    <div class="skill">💻 Bash · Python</div>
+    <h2>AWS DevOps Engineer</h2>
+    <div class="loc">📍 India</div>
+    <div class="updated">🟢 Last Updated — Today</div>
+    <a class="cta" href="mailto:pawansinghrishu@gmail.com">Talk with Pawan</a>
   </div>
 
-  <!-- DevOps Tools Experience Graph -->
-  <div class="section-title" style="margin-top:18px">DevOps Tools Experience</div>
-  <div class="skill-graph">
-    <div class="graph-row"><span>AWS</span><div class="bar" style="width:95%"></div></div>
-    <div class="graph-row"><span>Jenkins</span><div class="bar" style="width:90%"></div></div>
-    <div class="graph-row"><span>Docker</span><div class="bar" style="width:98%"></div></div>
-    <div class="graph-row"><span>Kubernetes (EKS)</span><div class="bar" style="width:97%"></div></div>
-    <div class="graph-row"><span>Terraform</span><div class="bar" style="width:88%"></div></div>
-    <div class="graph-row"><span>Prometheus / Grafana</span><div class="bar" style="width:85%"></div></div>
-  </div>
-</section>
-
-<!-- PROJECTS -->
-<div class="section-title">Featured Projects</div>
-<section class="projects">
-  <div class="project glass">
-    <h3>Scouting Myntra App — DevSecOps CI/CD</h3>
-    <p class="muted">GitHub Actions · Docker · Trivy · SonarQube · EKS</p>
-    <p>Automated CI/CD pipeline with GitHub Actions, integrated image scanning, SonarQube quality gates and Helm deployments to EKS.</p>
-    <p><a class="btn" href="https://github.com/pawansinghrishu" target="_blank">Open Repo</a></p>
-  </div>
-
-  <div class="project glass">
-    <h3>Secure Hotstar Clone — DevSecOps Pipeline</h3>
-    <p class="muted">Jenkins · Docker · Trivy · SonarQube · Kubernetes</p>
-    <p>Jenkins pipelines for build/test/deploy, container scanning, code quality checks and Kubernetes deployments.</p>
-    <p><a class="btn" href="https://github.com/pawansinghrishu" target="_blank">Open Repo</a></p>
-  </div>
-
-  <div class="project glass">
-    <h3>Netflix Clone — Cloud Monitoring & Observability</h3>
-    <p class="muted">Prometheus · Grafana · Docker · Kubernetes</p>
-    <p>Monitoring dashboards, alerting rules, and automated deployments for reliable observability.</p>
-    <p><a class="btn" href="https://github.com/pawansinghrishu" target="_blank">Open Repo</a></p>
-  </div>
-</section>
-
-<!-- AWS ARCHITECTURE -->
-<div class="section-title">AWS Architecture Designs</div>
-<section class="arch-section">
-  <div class="arch-card glass">
-    <h3>CI/CD Pipeline Architecture</h3>
-    <img src="https://i.imgur.com/TPvH1Uk.png" alt="CI/CD Architecture">
-    <p class="muted">Source control → CI → Image scan → CD → EKS</p>
-  </div>
-
-  <div class="arch-card glass">
-    <h3>EKS Kubernetes Architecture</h3>
-    <img src="https://i.imgur.com/HZRAY0S.png" alt="EKS Architecture">
-    <p class="muted">Load balancer, worker nodes, autoscaling and ingress.</p>
-  </div>
-
-  <div class="arch-card glass">
-    <h3>Monitoring & Observability</h3>
-    <img src="https://i.imgur.com/hulvKeg.png" alt="Monitoring Architecture">
-    <p class="muted">Prometheus, Grafana, alerting and dashboards.</p>
-  </div>
-</section>
-
-<!-- BLOG (Template) -->
-<div class="section-title" id="blog">Tech Blogs (Template)</div>
-<section class="blog-section">
-  <div class="blog-card glass">
-    <h3>Docker Complete Guide</h3>
-    <p>Learn containers, images, volumes & debugging. (Template — add content or link to your blog)</p>
-    <a class="btn" href="#" aria-label="Read Docker blog">Read More</a>
-  </div>
-
-  <div class="blog-card glass">
-    <h3>AWS EC2 Beginner Guide</h3>
-    <p>Understand instances, security groups & pricing. (Template — replace with your post)</p>
-    <a class="btn" href="#" aria-label="Read EC2 blog">Read More</a>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<div class="section-title" id="contact">Contact</div>
-<section class="section glass">
-  <div style="display:flex;flex-direction:column;gap:8px;max-width:700px;margin:0 auto;padding:6px 12px">
-    <p class="muted">For collaborations, freelance work or questions — drop a message or open an email.</p>
-
-    <!-- Contact form: opens mail client with filled content (works on GitHub Pages no backend) -->
-    <form class="contact-form" onsubmit="handleContactForm(event)">
-      <input type="text" id="cf-name" placeholder="Your Name" required />
-      <input type="email" id="cf-email" placeholder="Your Email" required />
-      <textarea id="cf-message" placeholder="Your Message..." required></textarea>
-      <div style="display:flex;gap:12px;align-items:center">
-        <button type="submit">Send Message</button>
-        <a class="btn" href="mailto:pawansinghrishu@gmail.com">Email Direct</a>
-      </div>
-    </form>
-
-    <div style="margin-top:6px;color:rgba(255,255,255,0.75)">
-      Or message on: <a href="https://wa.me/919709082083" target="_blank" style="color:inherit">WhatsApp</a> • <a href="https://www.linkedin.com/in/pawan009" target="_blank" style="color:inherit">LinkedIn</a>
+  <!-- Intro summary (quote style) -->
+  <div class="summary-wrap" style="margin-top:18px;" aria-label="Professional summary">
+    <div class="quote-left">“</div>
+    <div class="quote-right">”</div>
+    <div class="summary">
+      Enthusiastic and detail-oriented DevOps & Cloud Engineer (Fresher) with a strong understanding of CI/CD automation,
+      containerization, and cloud deployment. Skilled in leveraging tools such as GitHub Actions, Jenkins, Docker,
+      Kubernetes (EKS), and AWS to design and manage secure, automated pipelines. Experienced in using Trivy,
+      Docker Scout, and SonarQube for vulnerability scanning and code-quality analysis. Passionate about
+      implementing automation, security, and monitoring to ensure reliable, scalable systems.
     </div>
   </div>
 </section>
 
-<!-- HELP / Misc -->
-<div class="section" style="max-width:1100px;margin:0 auto 30px;padding:12px 20px;color:rgba(255,255,255,0.8)">
-  <h4 style="margin:0 0 8px 0">Help Desk</h4>
-  <p style="margin:0">Use the contact form above or email <strong>pawansinghrishu@gmail.com</strong>. For quick assistance: <a href="mailto:pawansinghrishu@gmail.com" style="color:inherit">Send Mail</a></p>
+<!-- SKILLS card -->
+<section class="skills-card" aria-labelledby="skills-title">
+  <h2 id="skills-title">Skills</h2>
+  <div class="pills" role="list">
+    <!-- Add or remove pills as you want -->
+    <span class="pill">AWS</span>
+    <span class="pill">EC2</span>
+    <span class="pill">S3</span>
+    <span class="pill">VPC</span>
+    <span class="pill">CloudWatch</span>
+    <span class="pill">SNS</span>
+    <span class="pill">Route 53</span>
+    <span class="pill">Beanstalk</span>
+    <span class="pill">Lambda</span>
+    <span class="pill">SQS</span>
+    <span class="pill">Docker</span>
+    <span class="pill">Kubernetes (EKS)</span>
+    <span class="pill">Terraform</span>
+    <span class="pill">Jenkins</span>
+    <span class="pill">GitHub Actions</span>
+    <span class="pill">Trivy</span>
+    <span class="pill">Docker Scout</span>
+    <span class="pill">SonarQube</span>
+    <span class="pill">Prometheus</span>
+    <span class="pill">Grafana</span>
+    <span class="pill">Bash</span>
+    <span class="pill">Linux</span>
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="projects" style="padding-top:18px;">
+  <div style="max-width:1100px;margin:0 auto;padding:0 10px;">
+    <h2 style="font-size:28px;margin:8px 0 18px;font-weight:800">Featured Projects</h2>
+  </div>
+
+  <div class="projects-wrap">
+    <article class="proj" aria-labelledby="p1">
+      <h3 id="p1">Scouting Myntra App — DevSecOps CI/CD</h3>
+      <div class="muted">GitHub Actions · Docker · Trivy · Docker Scout · SonarQube · EKS</div>
+      <p>Automated CI/CD pipeline with GitHub Actions, integrated image scanning and code-quality checks, and Helm-based deployments to EKS for a secure delivery workflow.</p>
+      <p><a class="proj-btn" href="https://github.com/pawansinghrishu" target="_blank" rel="noopener">Open Repo</a></p>
+    </article>
+
+    <article class="proj" aria-labelledby="p2">
+      <h3 id="p2">Secure Hotstar Clone — DevSecOps Pipeline</h3>
+      <div class="muted">Jenkins · Docker · Trivy · SonarQube · Kubernetes</div>
+      <p>Built Jenkins pipelines to automate build, test and deploy stages; integrated container security scanning and SonarQube quality gates; deployed to Kubernetes/EKS for production-like testing.</p>
+      <p><a class="proj-btn" href="https://github.com/pawansinghrishu" target="_blank" rel="noopener">Open Repo</a></p>
+    </article>
+
+    <article class="proj" aria-labelledby="p3">
+      <h3 id="p3">Netflix Clone — Cloud Monitoring & Observability</h3>
+      <div class="muted">Prometheus · Grafana · Docker · Kubernetes</div>
+      <p>Implemented monitoring and alerting using Prometheus & Grafana, created dashboards for latency, CPU, memory metrics and automated deployments using CI tools.</p>
+      <p><a class="proj-btn" href="https://github.com/pawansinghrishu" target="_blank" rel="noopener">Open Repo</a></p>
+    </article>
+  </div>
+</section>
+
+<!-- Experience -->
+<section id="experience" style="padding-top:18px;">
+  <div class="card">
+    <h2 style="margin:0 0 10px;font-size:26px;font-weight:800">Experience</h2>
+    <div style="display:flex;flex-direction:column;gap:12px;margin-top:8px">
+      <div>
+        <div class="job-title">DevOps Trainee — Grass Solution</div>
+        <div class="job-sub">2024 – Present</div>
+        <ul style="margin:8px 0 0 18px;color:#333;line-height:1.6">
+          <li>Worked on CI/CD automation using GitHub Actions & Jenkins.</li>
+          <li>Implemented Docker & Kubernetes workflows for containerized applications.</li>
+          <li>Used Trivy, Docker Scout and SonarQube to introduce DevSecOps checks.</li>
+          <li>Hands-on deployments on AWS and monitoring (CloudWatch, Prometheus).</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Education -->
+<section id="education" style="padding-top:18px;">
+  <div class="card">
+    <h2 style="margin:0 0 10px;font-size:26px;font-weight:800">Education</h2>
+    <div style="margin-top:8px">
+      <div style="font-weight:800;font-size:20px">MCA — Galgotias University</div>
+      <div style="color:var(--muted);margin-top:6px">2023 – 2025</div>
+      <div style="margin-top:8px;color:#333">Cloud & DevOps specialization</div>
+    </div>
+  </div>
+</section>
+
+<!-- Certifications -->
+<section style="padding-top:18px;">
+  <div class="certs">
+    <div class="cert">🏅 AWS Solutions Architect — Associate (SAA-C03)</div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" style="padding-top:18px;">
+  <div class="contact" aria-label="Contact">
+    <h2 style="margin:0;font-size:22px;font-weight:800">Contact</h2>
+    <div class="contact-row">
+      <a class="contact-btn" href="mailto:pawansinghrishu@gmail.com">Email — pawansinghrishu@gmail.com</a>
+      <a class="contact-btn" href="https://wa.me/919709082083" style="background:#25D366">WhatsApp</a>
+      <a class="contact-btn" href="https://github.com/pawansinghrishu" target="_blank">GitHub</a>
+      <a class="contact-btn" href="https://www.linkedin.com/in/pawan009" target="_blank">LinkedIn</a>
+    </div>
+
+    <p style="color:var(--muted);margin-top:10px">Or use the Resume download below:</p>
+    <p><a class="cta" id="resumeBtn" href="resume.pdf" download onclick="countDownload()">⬇ Download Resume (<span id="dlCount">0</span>)</a></p>
+  </div>
+</section>
+
+<!-- black skills strip -->
+<div class="skills-strip" aria-hidden="true">
+  <div style="width:14px"></div>
+  <div class="item">S3</div>
+  <div class="item">elb</div>
+  <div class="item">vpc</div>
+  <div class="item">CloudWatch</div>
+  <div class="item">SNS</div>
+  <div class="item">route 53</div>
+  <div class="item">Beanstalk</div>
+  <div class="item">lambda functions</div>
+  <div class="item">SQS</div>
+  <div class="item">Terraform</div>
+  <div class="item">Docker</div>
+  <div class="item">Kubernetes</div>
+  <div class="item">Prometheus</div>
+  <div class="item">Grafana</div>
+  <div style="width:14px"></div>
 </div>
 
-<!-- FOOTER -->
+<!-- footer -->
 <footer>
-  <div>© Pawan Singh — AWS DevOps Engineer</div>
-  <div style="display:flex;gap:14px;align-items:center;font-size:20px">
-    <a href="https://github.com/pawansinghrishu" target="_blank" style="color:inherit"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" style="width:22px;filter:invert(1);"></a>
-    <a href="https://www.linkedin.com/in/pawan009" target="_blank" style="color:inherit"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" style="width:22px;filter:invert(1);"></a>
-    <a href="https://wa.me/919709082083" target="_blank" style="color:#25D366"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg" style="width:22px;filter:invert(1);"></a>
-    <a href="mailto:pawansinghrishu@gmail.com" style="color:inherit"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/gmail.svg" style="width:22px;filter:invert(1);"></a>
+  <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+    <div>© <strong>Pawan Singh</strong> — AWS DevOps Engineer</div>
+    <div style="display:flex;gap:12px;align-items:center">
+      <a href="https://github.com/pawansinghrishu" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/pawan009" target="_blank">LinkedIn</a>
+      <a href="mailto:pawansinghrishu@gmail.com">Email</a>
+    </div>
   </div>
 </footer>
 
-<!-- Floating WA CTA -->
-<div class="float-cta" title="Message on WhatsApp" onclick="window.open('https://wa.me/919709082083','_blank')">
-  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg" style="width:22px;filter:invert(1);">
-</div>
-
-<!-- Scripts -->
+<!-- Scripts: resume download counter -->
 <script>
-// Resume download counter (localStorage)
-function countDownload(){
-  let count = parseInt(localStorage.getItem('resumeDownloads')||'0',10);
-  count = isNaN(count)?1:count+1;
-  localStorage.setItem('resumeDownloads', count);
-  document.getElementById('dlCount').innerText = count;
-}
-window.addEventListener('load', function(){
-  document.getElementById('dlCount').innerText = localStorage.getItem('resumeDownloads') || 0;
-});
-
-// Contact form: opens default mail client with filled subject/body
-function handleContactForm(e){
-  e.preventDefault();
-  const name = encodeURIComponent(document.getElementById('cf-name').value || '');
-  const email = encodeURIComponent(document.getElementById('cf-email').value || '');
-  const message = encodeURIComponent(document.getElementById('cf-message').value || '');
-  const subject = encodeURIComponent('Portfolio Contact from ' + (name || email));
-  const body = encodeURIComponent('Name: ' + decodeURIComponent(name) + '\nEmail: ' + decodeURIComponent(email) + '\n\nMessage:\n' + decodeURIComponent(message));
-  const mailto = `mailto:pawansinghrishu@gmail.com?subject=${subject}&body=${body}`;
-  // open mail client
-  window.location.href = mailto;
-}
-
-// optional: reveal animations
-(function(){
-  const revealTargets = document.querySelectorAll('.section-title, .project, .arch-card, .blog-card, .skill-graph, .contact-form');
-  function runReveal(){
-    revealTargets.forEach((el,i)=>{
-      const rect = el.getBoundingClientRect();
-      if(rect.top < window.innerHeight - 60) el.style.opacity = 1;
-    });
+  function countDownload(){
+    try{
+      let n = parseInt(localStorage.getItem('resumeDownloads')||'0',10);
+      n = isNaN(n)?1:n+1;
+      localStorage.setItem('resumeDownloads', n);
+      document.getElementById('dlCount').innerText = n;
+    }catch(e){}
   }
-  window.addEventListener('scroll', runReveal);
-  runReveal();
-})();
+  window.addEventListener('load', function(){
+    try{
+      document.getElementById('dlCount').innerText = localStorage.getItem('resumeDownloads') || 0;
+    }catch(e){}
+  });
 </script>
 
 </body>
